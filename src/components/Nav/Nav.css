@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: plum;
+}
