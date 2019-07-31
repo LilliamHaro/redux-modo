@@ -5,6 +5,12 @@ import { changeModo } from '../../redux/actions';
 
 
 
+const mapStateToProps = state => {
+  return {
+    modoTitle: state.modoTitle
+  }
+}
+
 function mapDispatchToProps(dispatch) {
   return {
     changeModo: modo => dispatch(changeModo())
@@ -25,12 +31,12 @@ class ConnectedFooter extends Component  {
   render() {
     return(
       <footer>
-        <button onClick={this.changingModo} >Change modo</button>
+        <button onClick={this.changingModo} >{this.props.modoTitle}</button>
       </footer>
     )
   }
 }
 
-const Footer = connect(null,mapDispatchToProps)(ConnectedFooter)
+const Footer = connect(mapStateToProps,mapDispatchToProps)(ConnectedFooter)
 
 export default Footer

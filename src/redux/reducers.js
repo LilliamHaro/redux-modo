@@ -2,7 +2,8 @@ import { ADD_TO_BUYCAR, CHANGE_MODO} from './actionTypes';
 
 const initialState = {
   buyCar:[{name:'ffgf'}],
-  modo:"dia"
+  modo:"dia",
+  modoTitle:"MODO DIA"
 }
 
 function rootReducer(state=initialState, action) {
@@ -14,7 +15,8 @@ function rootReducer(state=initialState, action) {
 
   if(action.type === CHANGE_MODO ) {
     return  Object.assign({},state,{
-      modo: state.modo === 'dia' ? state.modo = 'noche' : state.modo = 'dia'
+      modo: state.modo === 'dia' ? state.modo = 'noche' : state.modo = 'dia',
+      modoTitle: state.modo === 'dia' ? state.modoTitle = 'MODO DIA' : state.modoTitle = 'MODO NOCHE'
     })
   }
   return state

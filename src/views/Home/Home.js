@@ -7,7 +7,7 @@ import { addToBuycar } from '../../redux/actions';
 
 const mapStateToProps = state => {
   return {
-    modo:state.modo
+    modoTitle:state.modoTitle
   }
 }
 
@@ -44,8 +44,9 @@ class ConnectedHome extends Component {
   render(){
     return(
       <Layout>
-        <section className={"sectionContent home "+this.props.modo}>
+        <section className="sectionContent home">
           <h1>HOME</h1>
+          <h3>{this.props.modoTitle}</h3>
 
           <button onClick={this.sendProducts}>Add Products to Buycar</button>
         

@@ -4,4 +4,15 @@ main {
   flex-direction: column;
   width: 100%;
   position: relative;
+  transition:  all 0.3s;
+}
+
+main.dia {
+  background: #fff;
+  color: #000
+}
+
+main.noche {
+  background: #000;
+  color: #fff
 }
